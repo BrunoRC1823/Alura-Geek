@@ -1,0 +1,61 @@
+.quienes-somos_section {
+    background-color: rgba(234, 242, 253, 1);
+    width: 100%;
+    height: 25rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding: 5rem;
+    box-sizing: border-box;
+}
+
+.quienes-somos_container {
+    height: 100%;
+    justify-content: space-around;
+}
+
+.logo-ag_quienes-somos {
+    width: 30%;
+    height: 30%;
+}
+
+.quienes-somos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.input_quienes-somos {
+    color: var(--color-letras);
+}
+.input_quienes-somos:hover {
+    text-decoration: underline;
+    color: var(--color-letras);
+}
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 2;
+    margin-left: 5rem;
+}
+
+.contacto-titulo {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.contacto-input {
+    padding: 1rem 1rem;
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+.contacto-mensaje {
+    padding: 1rem 1rem;
+    width: 80%;
+    margin-bottom: 1rem;
+    resize: none;
+    overflow: auto;
+    border: none;
+    outline: none;
+}

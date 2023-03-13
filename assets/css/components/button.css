@@ -1,0 +1,38 @@
+@import url(../base/_variables.css);
+.button {
+    display: inline-block;
+    background-color: #ffffff00;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    width: 50%;
+    height: 2.5rem;
+    max-width: 10rem;
+    padding: 0.7rem 1rem;
+    box-sizing: border-box;
+    color: var(--primary-color);
+    align-self: center;
+    text-align: center;
+    font-size: 0.95rem;
+}
+.button:hover{
+    box-shadow: 0px 0px 15px var(--primary-color);
+    transform: scale(0.97);
+    transition: 0.5s;
+}
+.submit-button {
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--body-color);
+    padding: 0.8rem 1rem;
+    border-radius: 7px
+}
+.info-button {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.info-button:hover{
+    text-shadow: 0px 0px 15px var(--primary-color);
+    transform: scale(0.99);
+    transition: 0.5s;
+}
