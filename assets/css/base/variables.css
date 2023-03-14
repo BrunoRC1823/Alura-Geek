@@ -1,6 +1,12 @@
 :root{
     --font-family: 'Raleway', sans-serif;
-    --body-color: #ffffff;
-    --primary-color: #2a7ae4;
+    --body-color: rgb(255, 255, 255);
+    --primary-color: rgb(42, 123, 229);
+    --secondary-color:rgb(245, 245, 245);
     --color-letras:rgba(70, 70, 70, 1);
+    --shadows-color:rgba(151, 151, 151, 0.396);
+    --tertiary-color:rgba(234, 242, 253, 1);
+    --transparente:rgba(245, 245, 245, 0);
+    --color_Icon-search:rgb(162, 162, 162);
+    --black-shadow:rgba(0, 0, 0);
 }

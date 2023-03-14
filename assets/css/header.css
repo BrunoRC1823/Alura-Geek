@@ -32,12 +32,12 @@
     padding: 0 1rem;
 }
 .input_search{
-    background-color: #f5f5f500;
+    background-color: var(--transparente);
     width: 100%;
     min-width: 200px;
 }
 .logo_search{
-    color: #A2A2A2;
+    color: var(--color_Icon-search);
 }
 @media screen and (max-width: 768px) {
     .header {
@@ -68,7 +68,7 @@
         justify-content: flex-end;
     }
     .header_search{
-        background-color: #a2a2a200;
+        background-color: var(--transparente);
         order: 2;
         padding: 0;
         margin-left: 1rem;

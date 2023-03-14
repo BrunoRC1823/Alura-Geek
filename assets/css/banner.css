@@ -5,13 +5,13 @@
     background: url('../img/Hero.jpg') no-repeat center center/cover;
     width: calc(100vw - 17px) ;
     height:350px;
-    box-shadow: inset 0 -50px 200px rgb(0, 0, 0);
+    box-shadow: inset 0 -50px 200px var(--black-shadow);
 }
 .banner_titulo-container{
     position: absolute;
     top: 40%;
     left: 10%;
-    color: rgba(255, 255, 255, 1);
+    color: var(--body-color);
     height:10rem;
     display: flex;
     flex-direction: column;
@@ -19,12 +19,12 @@
 }
 .banner_titulo{
     font-size: 3.5rem;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
+    text-shadow: 0 4px 4px var(--black-shadow);
     font-weight: 700;
 }
 .banner_titulo-promo{
     font-size: 1.3rem;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
+    text-shadow: 0 4px 4px var(--black-shadow);
     font-weight: 400;
 }
 @media screen and (max-width: 768px) {

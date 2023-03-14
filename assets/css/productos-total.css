@@ -1,0 +1,26 @@
+.productos_section{
+    background-color: var(--secondary-color);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1.5rem;
+}
+.productos_titulo-container{
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    align-items: center;
+}
+.titulo_productos{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 1106px) {
+    .cards>.card:nth-child(n+5) {
+        display: flex;
+    }
+}
+@media screen and (max-width: 768px) {
+    .titulo_productos{
+        font-size: 1.2rem;
+    }
+}

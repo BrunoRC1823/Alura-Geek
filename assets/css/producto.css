@@ -1,0 +1,38 @@
+.img_producto{
+    background: url('../img/pasada_sol_imp.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 60%;
+    border-radius: 9px 9px 0  0;
+}
+.nombre_producto{
+    color: var(--color-letras);
+    font-size: 0.91rem;
+}
+.precio_producto{
+    color: var(--color-letras);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.91rem;
+}
+.codigo_producto{
+    font-style: italic;
+}
+@media screen and (max-width: 534px) {
+    .nombre_producto{
+        font-size: 0.87rem;
+    }
+    .precio_producto{
+        font-size: 0.87rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    .nombre_producto{
+        font-size: 0.84rem;
+    }
+    .precio_producto{
+        font-size: 0.84rem;
+    }
+    .codigo_producto{
+        font-size: 0.89rem;
+    }
+}

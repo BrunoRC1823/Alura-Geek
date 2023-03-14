@@ -4,4 +4,11 @@
 }
 .footer-text{
     text-align: center;
+    font-size: 0.8rem;
+}
+@media screen and (max-width: 360px) {
+    .footer-text{
+        text-align: center;
+        font-size: 0.7rem;
+    }
 }

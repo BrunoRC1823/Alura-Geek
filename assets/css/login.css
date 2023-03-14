@@ -1,5 +1,5 @@
 .form_section{
-    background-color: #F5F5F5;
+    background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +26,7 @@
     width: 100%;
     height: 3rem;
     font-size: 0.9rem;
-    box-shadow: 2px 1px 3px #97979765;
+    box-shadow: 2px 1px 3px var(--shadows-color);
     padding: 0 1rem;
     box-sizing: border-box;
 }
