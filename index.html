@@ -11,7 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/base/base.css">
-    <link rel="stylesheet" href="/assets/css/components/header.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/components/button.css">
     <link rel="stylesheet" href="/assets/css/banner.css">
     <link rel="stylesheet" href="/assets/css/categorias.css">
@@ -22,14 +22,14 @@
 
 <body>
     <header class="header">
-        <div class="container center">
-            <img src="assets/img/Logo.svg" alt="logoAluraGeek" class="logo_header">
-            <div class="header_search">
-                <input class="input_search" type="text" placeholder="¿Que desea buscar?">
-                <i class="fa-solid fa-magnifying-glass logo_search"></i>
-            </div>
+        <img src="/assets/img/Logo.svg" alt="logoAluraGeek" class="logo_header">
+        <div class="search-button_container container center">
+        <div class="header_search">
+            <input class="input_search" type="text" placeholder="¿Que desea buscar?">
+            <i class="fa-solid fa-magnifying-glass logo_search"></i>
         </div>
         <a href="" class="button"> Login</a>
+        </div>
     </header>
     <main class="container column">
         <section class="banner">
@@ -48,7 +48,7 @@
         <section class="categorias">
             <div class="categoria_titulo-container container">
                 <h2 class="titulo_categoria">Star Wars </h2>
-                <div class="ver_todo">
+                <div class="ver_todo center flex">
                     <a href="" class="info-button">Ver todo</a>
                     <i class="fa-solid fa-arrow-right logo_ver-todo"></i>
                 </div>
@@ -100,7 +100,7 @@
 
             <div class="categoria_titulo-container container">
                 <h2 class="titulo_categoria">Star Wars </h2>
-                <div class="ver_todo">
+                <div class="ver_todo center flex">
                     <a href="" class="info-button">Ver todo</a>
                     <i class="fa-solid fa-arrow-right logo_ver-todo"></i>
                 </div>
@@ -152,7 +152,7 @@
 
             <div class="categoria_titulo-container container">
                 <h2 class="titulo_categoria">Star Wars </h2>
-                <div class="ver_todo">
+                <div class="ver_todo center flex">
                     <a href="" class="info-button">Ver todo</a>
                     <i class="fa-solid fa-arrow-right logo_ver-todo"></i>
                 </div>
@@ -204,7 +204,7 @@
 
             <div class="categoria_titulo-container container">
                 <h2 class="titulo_categoria">Star Wars </h2>
-                <div class="ver_todo">
+                <div class="ver_todo center flex">
                     <a href="" class="info-button">Ver todo</a>
                     <i class="fa-solid fa-arrow-right logo_ver-todo"></i>
                 </div>
@@ -256,14 +256,16 @@
         </section>
         <section class="quienes-somos_section">
             <div class="quienes-somos_container container">
-                <img src="assets/img/Logo.svg" alt="logoAluraGeek" class="logo-ag_quienes-somos">
-                <div class="quienes-somos">
-                    <a href="" class="input_quienes-somos">Quienes somos</a>
-                    <a href="" class="input_quienes-somos">Política de privacidad</a>
-                    <a href="" class="input_quienes-somos">Programa de fidelidad</a>
-                    <a href="" class="input_quienes-somos">Nuestras Tiendas</a>
-                    <a href="" class="input_quienes-somos">Quiero ser franquiciado</a>
-                    <a href="" class="input_quienes-somos">Anuncie aquí</a>
+                <div class="logo_quienes-somos_container">
+                    <img src="/assets/img/Logo.svg" alt="logoAluraGeek" class="logo-ag_quienes-somos">
+                    <div class="quienes-somos">
+                        <a href="" class="input_quienes-somos">Quienes somos</a>
+                        <a href="" class="input_quienes-somos">Política de privacidad</a>
+                        <a href="" class="input_quienes-somos">Programa de fidelidad</a>
+                        <a href="" class="input_quienes-somos">Nuestras Tiendas</a>
+                        <a href="" class="input_quienes-somos">Quiero ser franquiciado</a>
+                        <a href="" class="input_quienes-somos">Anuncie aquí</a>
+                    </div>
                 </div>
                 <div class="contacto">
                     <h2 class="contacto-titulo">Hable con nosotros</h2>
