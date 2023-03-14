@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
@@ -10,7 +10,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/base/reset.css">
     <link rel="stylesheet" href="assets/css/base/base.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/components/button.css">
@@ -23,13 +22,15 @@
 
 <body>
     <header class="header">
-        <img src="assets/img/Logo.svg" alt="logoAluraGeek" class="logo_header">
+        <a href="index.html">
+            <img src="assets/img/Logo.svg" alt="logoAluraGeek" class="logo_header">
+        </a>
         <div class="search-button_container container center">
-        <div class="header_search">
-            <input class="input_search" type="text" placeholder="¿Que desea buscar?">
-            <i class="fa-solid fa-magnifying-glass logo_search"></i>
-        </div>
-        <a href="" class="button"> Login</a>
+            <div class="header_search">
+                <input class="input_search" type="text" placeholder="¿Que desea buscar?">
+                <i class="fa-solid fa-magnifying-glass logo_search"></i>
+            </div>
+            <a href="login.html" class="button"> Login</a>
         </div>
     </header>
     <main class="container column">
@@ -269,12 +270,15 @@
                     </div>
                 </div>
                 <div class="contacto">
-                    <h2 class="contacto-titulo">Hable con nosotros</h2>
-                    <input class="contacto-input" type="text" placeholder="Nombre">
-                    <textarea class="contacto-mensaje" placeholder="Escriba un mensaje"></textarea>
-                    <div>
-                        <a href="" class="button submit-button">Enviar mensaje</a>
-                    </div>
+                    <form class="form-contacto">
+                        <h2 class="contacto-titulo">Hable con nosotros</h2>
+                        <input class="contacto-input" type="text" placeholder="Nombre" data-nombreContacto>
+                        <textarea class="contacto-mensaje" placeholder="Escriba un mensaje"
+                            data-mensajeContacto></textarea>
+                        <div>
+                            <a href="" class="button submit-button">Enviar mensaje</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

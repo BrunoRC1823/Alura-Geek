@@ -3,7 +3,6 @@
     width: 100%;
     height: 25rem;
     margin-bottom: 2rem;
-    margin-top: 1rem;
     padding: 5rem;
     box-sizing: border-box;
 }
@@ -41,13 +40,15 @@
     color: var(--color-letras);
 }
 .contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     flex-grow: 2;
     margin-right: 4rem;
 }
-
+.form-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
 .contacto-titulo {
     margin-bottom: 1rem;
     font-weight: 700;

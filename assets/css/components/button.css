@@ -22,7 +22,7 @@
     border: none;
     background-color: var(--primary-color);
     color: var(--body-color);
-    padding: 0.8rem 1rem;
+    padding: 0.7rem 1rem;
     border-radius: 7px
 }
 .info-button {
@@ -42,7 +42,7 @@
         font-size: 0.85rem;
     }
     .submit-button {
-        padding: 0.72rem 1rem;
+        padding: 0.62rem 1rem;
     }
     .info-button {
         font-size: 0.8rem;

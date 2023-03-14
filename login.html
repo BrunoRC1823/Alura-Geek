@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AluraGeek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/base/base.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/components/button.css">
+    <link rel="stylesheet" href="assets/css/components/card.css">
+    <link rel="stylesheet" href="assets/css/banner.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/quiene-somos.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img src="assets/img/Logo.svg" alt="logoAluraGeek" class="logo_header">
+        </a>
+        <div class="search-button_container container center">
+            <div class="header_search">
+                <input class="input_search" type="text" placeholder="¿Que desea buscar?">
+                <i class="fa-solid fa-magnifying-glass logo_search"></i>
+            </div>
+        </div>
+    </header>
+    <main class="container column">
+        <section class="form_section">
+            <form class="card-form">
+                <h1 class="form-titulo">Iniciar Sesión</h1>
+                <div class="input-container">
+                    <label class="input-label" for="email">Correo electrónico</label>
+                    <input name="email" id="email" class="input-form" type="email" placeholder="Escriba su electrónico"
+                        data-correo />
+                    <span class="input-message-error">Este campo no es valido</span>
+                </div>
+                <div class="input-container">
+                    <label class="input-label" for="password">Contraseña</label>
+                    <input name="password" id="password" class="input-form" type="password"
+                        placeholder="Escriba su contraseña" data-contra />
+                    <span class="input-message-error">Este campo no es valido</span>
+                </div>
+                <button type="submit" class="button submit-button">Entrar</button>
+            </form>
+        </section>
+        <section class="quienes-somos_section">
+            <div class="quienes-somos_container container">
+                <div class="logo_quienes-somos_container">
+                    <img src="assets/img/Logo.svg" alt="logoAluraGeek" class="logo-ag_quienes-somos">
+                    <div class="quienes-somos">
+                        <a href="" class="input_quienes-somos">Quienes somos</a>
+                        <a href="" class="input_quienes-somos">Política de privacidad</a>
+                        <a href="" class="input_quienes-somos">Programa de fidelidad</a>
+                        <a href="" class="input_quienes-somos">Nuestras Tiendas</a>
+                        <a href="" class="input_quienes-somos">Quiero ser franquiciado</a>
+                        <a href="" class="input_quienes-somos">Anuncie aquí</a>
+                    </div>
+                </div>
+                <div class="contacto">
+                    <form class="form-contacto">
+                        <h2 class="contacto-titulo">Hable con nosotros</h2>
+                        <input class="contacto-input" type="text" placeholder="Nombre">
+                        <textarea class="contacto-mensaje" placeholder="Escriba un mensaje"></textarea>
+                        <div>
+                            <button type="submit" class="button submit-button">Enviar mensaje</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h4 class="footer-text">© Desarrollado por Bruno Rios 2023</h4>
+    </footer>
+</body>
+<script src="https://kit.fontawesome.com/8e9f63a036.js" crossorigin="anonymous"></script>
+
+</html>

@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 170px;
+    width: 160px;
     height: 250px;
     border-radius: 10px;
     border: solid 1px #97979765;
@@ -15,7 +15,16 @@
     margin-right: 0.4rem;
     box-shadow: 2px 1px 3px #97979765;
 }
+.card-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 @media screen and (max-width: 768px) {
+    .cards > .card:nth-child(n+5) {
+        display: none;
+    }
     .card{
         width: 160px;
         margin-right: 0;
@@ -24,5 +33,8 @@
 @media screen and (max-width: 360px) {
     .card{
         width: 150px;
+    }
+    .cards > .card:nth-child(n+3) {
+        display: none;
     }
 }
