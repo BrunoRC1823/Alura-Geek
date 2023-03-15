@@ -71,4 +71,8 @@
         height: 100%;
         border-radius: 9px 0 0 9px;
     }
+    .img_producto-descripcion{
+        width: 100%;
+        border-radius: 9px;
+    }
 }
