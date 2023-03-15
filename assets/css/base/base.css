@@ -5,6 +5,9 @@ body {
     font-family: var(--font-family);
     width: 100%;
 }
+button{
+    cursor: pointer;
+}
 .container {
     display: flex;
 }
@@ -19,4 +22,54 @@ input:focus {
 }
 .flex{
     display: flex;
+}
+.input-label{
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+.input-form{
+    width: 100%;
+    height: 3rem;
+    font-size: 0.9rem;
+    box-shadow: 2px 1px 3px var(--shadows-color);
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+.textarea-form {
+    padding: 1rem 1rem;
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    resize: none;
+    overflow: auto;
+    border: none;
+    outline: none;
+    box-shadow: 2px 1px 3px var(--shadows-color);
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 35%;
+}
+.input-message-error{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .input-form {
+        margin-bottom: 0;
+        font-size: 0.86rem;
+    }
+    
+    .textarea-form {
+        margin-bottom: 0;
+        font-size: 0.86rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    .input-container{
+        width: 90%;
+    }
 }

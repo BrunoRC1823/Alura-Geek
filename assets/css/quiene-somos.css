@@ -62,16 +62,7 @@
     box-sizing: border-box
 }
 
-.contacto-mensaje {
-    padding: 1rem 1rem;
-    width: 100%;
-    margin-bottom: 1rem;
-    box-sizing: border-box;
-    resize: none;
-    overflow: auto;
-    border: none;
-    outline: none;
-}
+
 @media screen and (max-width: 768px) {
     .quienes-somos_section {
         padding: 2rem ;
@@ -103,15 +94,6 @@
     .contacto-titulo {
         margin-bottom: 0;
         font-size: 1rem;
-    }
-    .contacto-input {
-        margin-bottom: 0;
-        font-size: 0.86rem;
-    }
-    
-    .contacto-mensaje {
-        margin-bottom: 0;
-        font-size: 0.86rem;
     }
 }
 @media screen and (max-width: 360px) {

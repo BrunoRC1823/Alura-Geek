@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/components/button.css">
     <link rel="stylesheet" href="assets/css/components/card.css">
     <link rel="stylesheet" href="assets/css/banner.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/producto-agregar.css">
     <link rel="stylesheet" href="assets/css/quiene-somos.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
@@ -33,22 +33,40 @@
         </div>
     </header>
     <main class="container column">
-        <section class="form_section-login">
+        <section class="form_section_agregar-producto"">
             <form class="card-form">
-                <h1 class="form-titulo-login">Iniciar Sesión</h1>
+                <h1 class="form-titulo_agregar-producto">Agregar nuevo Producto</h1>
                 <div class="input-container">
-                    <label class="input-label" for="email">Correo electrónico</label>
-                    <input name="email" id="email" class="input-form" type="email" placeholder="Escriba su electrónico"
-                        data-correo />
+                    <label class="input-label" for="url">Correo electrónico</label>
+                    <input name="url" id="url" class="input-form" type="url" placeholder="URL de la imagen"
+                        data-url />
                     <span class="input-message-error">Este campo no es valido</span>
                 </div>
                 <div class="input-container">
-                    <label class="input-label" for="password">Contraseña</label>
-                    <input name="password" id="password" class="input-form" type="password"
-                        placeholder="Escriba su contraseña" data-contra />
+                    <label class="input-label" for="cate">Categoria</label>
+                    <input name="cate" id="cate" class="input-form" type="text"
+                        placeholder="Categoria" data-categoria />
                     <span class="input-message-error">Este campo no es valido</span>
                 </div>
-                <button type="submit" class="button submit-button">Entrar</button>
+                <div class="input-container">
+                    <label class="input-label" for="cate">Producto</label>
+                    <input name="prod" id="prod" class="input-form" type="text"
+                        placeholder="Ingrese ombre del producto" data-producto />
+                    <span class="input-message-error">Este campo no es valido</span>
+                </div>
+                <div class="input-container">
+                    <label class="input-label" for="precio">Precio</label>
+                    <input name="precio" id="precio" class="input-form" type="number"
+                        placeholder="Ingrese precio del producto" data-precio />
+                    <span class="input-message-error">Este campo no es valido</span>
+                </div>
+                <div class="input-container">
+                    <label class="input-label" for="descr">Descripcion</label>
+                    <textarea name="descr" id="descr" class="textarea-form" type="text"
+                        placeholder="Ingrese una descripcion" data-descr ></textarea>
+                    <span class="input-message-error">Este campo no es valido</span>
+                </div>
+                <button type="submit" class="button submit-button">Guardar</button>
             </form>
         </section>
         <section class="quienes-somos_section">

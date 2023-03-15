@@ -1,4 +1,5 @@
 .img_producto{
+    position: relative;
     background: url('../img/pasada_sol_imp.jpg') no-repeat center center/cover;
     width: 100%;
     height: 60%;
@@ -26,12 +27,6 @@
     }
 }
 @media screen and (max-width: 360px) {
-    .nombre_producto{
-        font-size: 0.84rem;
-    }
-    .precio_producto{
-        font-size: 0.84rem;
-    }
     .codigo_producto{
         font-size: 0.89rem;
     }

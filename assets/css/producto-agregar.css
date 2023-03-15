@@ -1,15 +1,14 @@
-.form_section-login{
+.form_section_agregar-producto{
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding-bottom: 2rem;
+    padding-top: 2rem;
 }
-.form-titulo-login{
-    margin-top: 2rem;
+.form-titulo_agregar-producto{
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
-

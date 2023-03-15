@@ -14,6 +14,33 @@
     font-weight: 700;
     font-size: 1.5rem;
 }
+.mantenimiento_container{
+    float: right;
+    width: 27%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.6rem;
+}
+.delete-icon{
+    color: var(--body-color);
+    cursor: pointer;
+}
+.delete-icon:hover{
+    transition: 0.7s;
+    color: red;
+    transform: scale(0.99);
+    text-shadow: 0px 0px 15px red;
+}
+.edit-icon{
+    color: var(--body-color);
+    cursor: pointer;
+}
+.edit-icon:hover{
+    transition: 0.7s;
+    transform: scale(0.99);
+    color: var(--primary-color);
+    text-shadow: 0px 0px 15px var(--primary-color);
+}
 @media screen and (max-width: 1106px) {
     .cards>.card:nth-child(n+5) {
         display: flex;
@@ -22,5 +49,10 @@
 @media screen and (max-width: 768px) {
     .titulo_productos{
         font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 351px) {
+    .mantenimiento_container{
+        width: 33%;
     }
 }
