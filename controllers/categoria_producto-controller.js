@@ -15,7 +15,7 @@ const CrearNuevoTituloFila = (categoria,id) => {
     container.innerHTML = contenido;
     const verTodo = container.querySelector('.ver_todo');
     verTodo.addEventListener('click', () => {
-        window.location.href = `/producto-lista.html?categoria_id=${id}`;
+        window.location.href = `producto-lista.html?categoria_id=${id}`;
     })
     return container;
 }
@@ -26,7 +26,7 @@ const CrearNuevoFila = (nombre, precio, url, id) => {
         <div class="card-info">
             <p class="nombre_producto">${nombre}</p>
             <h4 class="precio_producto">$${precio}</h4>
-            <a href="../producto.html?id=${id}" class="info-button">Ver Producto</a>
+            <a href="producto.html?id=${id}" class="info-button">Ver Producto</a>
         </div>`
     fila.classList.add('card');
     fila.innerHTML = contenido;

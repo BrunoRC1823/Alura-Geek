@@ -27,7 +27,7 @@ const CrearNuevoFila = (nombre, precio, url, id) => {
         <div class="img_producto">
             <div class="mantenimiento_container">
                 <i class="fa-solid fa-trash delete-icon" id=${id} data-trashIcon></i>
-                <a href='../agregarProducto.html?id=${id}'><i class="fa-solid fa-pen edit-icon"></i></a>
+                <a href='agregarProducto.html?id=${id}'><i class="fa-solid fa-pen edit-icon"></i></a>
             </div>
         </div>
         <div class="card-info">
