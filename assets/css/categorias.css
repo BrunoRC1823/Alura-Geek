@@ -22,6 +22,7 @@
 
 .ver_todo:hover{
     text-shadow: 0px 0px 15px var(--primary-color);
+    cursor: pointer;
 }
 @media screen and (max-width: 768px) {
     .categorias{

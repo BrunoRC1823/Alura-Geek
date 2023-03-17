@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="assets/css/base/base.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/components/button.css">
-    <link rel="stylesheet" href="assets/css/components/card.css">
     <link rel="stylesheet" href="assets/css/banner.css">
-    <link rel="stylesheet" href="assets/css/producto-agregar.css">
+    <link rel="stylesheet" href="assets/css/categorias.css">
+    <link rel="stylesheet" href="assets/css/producto.css">
+    <link rel="stylesheet" href="assets/css/components/card.css">
+    <link rel="stylesheet" href="assets/css/productos-total.css">
     <link rel="stylesheet" href="assets/css/quiene-somos.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
@@ -32,46 +34,15 @@
             </div>
         </div>
     </header>
-    <main class="container column" data-form>
-        <section class="form_section_agregar-producto">
-            <div class="titulo_agregar-producto-container container">
-                <h1 class="titulo_agregar-producto">Mantenimiento <a class="azul">de Producto</a></h1>
-                <a href="producto-lista.html" class="button volver-lista">
-                    <i class="fa-solid fa-rotate-left"></i>
-                    Volver</a>
+    <main class="container column">
+        <section class="productos_section">
+            <div class="productos_titulo-container container" data-productos-titulo-container>
+                
+                
             </div>
-            <form class="card-form" data-form>
-                <h2 class="form-titulo_agregar-producto">Agregar <a class="azul">nuevo</a> Producto</h2>
-                <div class="input-container">
-                    <label class="input-label" for="url">Url de la imagen</label>
-                    <input name="url" id="url" class="input-form" type="text" placeholder="URL de la imagen" data-url />
-                    <span class="input-message-error">Este campo no es valido</span>
-                </div>
-                <div class="input-container" data-select-categoria-container>
-                    <label class="input-label" for="cate">Categoria</label>
-
-                    <span class="input-message-error">Seleccione una opción</span>
-                </div>
-                <div class="input-container">
-                    <label class="input-label" for="cate">Producto</label>
-                    <input name="prod" id="prod" class="input-form" type="text" placeholder="Ingrese ombre del producto"
-                        data-producto />
-                    <span class="input-message-error">Este campo no es valido</span>
-                </div>
-                <div class="input-container">
-                    <label class="input-label" for="precio">Precio</label>
-                    <input name="precio" id="precio" class="input-form" type="number" step="0.01" min="0.01"
-                        max="9999999" placeholder="Ingrese precio del producto" data-precio required />
-                    <span class="input-message-error">Este campo no es valido</span>
-                </div>
-                <div class="input-container">
-                    <label class="input-label" for="descr">Descripcion</label>
-                    <textarea name="descr" id="descr" class="textarea-form" type="text"
-                        placeholder="Ingrese una descripcion" data-descr></textarea>
-                    <span class="input-message-error">Este campo no es valido</span>
-                </div>
-                <button type="submit" class="button submit-button">Guardar</button>
-            </form>
+            <div class="cards" data-cards>
+                
+            </div>
         </section>
         <section class="quienes-somos_section">
             <div class="quienes-somos_container container">
@@ -104,9 +75,5 @@
     </footer>
 </body>
 <script src="https://kit.fontawesome.com/8e9f63a036.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
-    integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script type="module" src="controllers/producto_registrar-controller.js"></script>
-
+<script type="module" src="controllers/producto-controller.js"></script>
 </html>

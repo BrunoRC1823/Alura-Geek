@@ -8,7 +8,24 @@
     padding-top: 2rem;
 }
 .form-titulo_agregar-producto{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
+}
+.titulo_agregar-producto-container{
+    justify-content: space-between;
+    padding: 0 2rem 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 1.6rem;
+    border-bottom: 1px solid var(--shadows-color);
+    box-shadow: 2px 1px 1px var(--shadows-color);
+    align-items: center;
+}
+.titulo_agregar-producto{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.volver-lista{
+    width:6rem;
 }
