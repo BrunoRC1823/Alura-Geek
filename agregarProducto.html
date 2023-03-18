@@ -36,7 +36,7 @@
         <section class="form_section_agregar-producto">
             <div class="titulo_agregar-producto-container container">
                 <h1 class="titulo_agregar-producto">Mantenimiento <a class="azul">de Producto</a></h1>
-                <a href="producto-lista.html" class="button volver-lista">
+                <a href="javascript:history.back()" class="button volver-lista" data-volver>
                     <i class="fa-solid fa-rotate-left"></i>
                     Volver</a>
             </div>
@@ -44,30 +44,30 @@
                 <h2 class="form-titulo_agregar-producto">Agregar <a class="azul">nuevo</a> Producto</h2>
                 <div class="input-container">
                     <label class="input-label" for="url">Url de la imagen</label>
-                    <input name="url" id="url" class="input-form" type="text" placeholder="URL de la imagen" data-url />
+                    <input name="url" id="url" class="input-form" type="text" required placeholder="URL de la imagen"
+                        data-tipo="url" />
                     <span class="input-message-error">Este campo no es valido</span>
                 </div>
                 <div class="input-container" data-select-categoria-container>
                     <label class="input-label" for="cate">Categoria</label>
-
                     <span class="input-message-error">Seleccione una opción</span>
                 </div>
                 <div class="input-container">
                     <label class="input-label" for="cate">Producto</label>
-                    <input name="prod" id="prod" class="input-form" type="text" placeholder="Ingrese ombre del producto"
-                        data-producto />
+                    <input name="prod" id="prod" class="input-form" type="text" 
+                        placeholder="Ingrese nombre del producto" data-tipo="producto" pattern="^(?=.*[a-zA-Z])[a-zA-Z0-9 ]{4,15}$" required/>
                     <span class="input-message-error">Este campo no es valido</span>
                 </div>
                 <div class="input-container">
                     <label class="input-label" for="precio">Precio</label>
                     <input name="precio" id="precio" class="input-form" type="number" step="0.01" min="0.01"
-                        max="9999999" placeholder="Ingrese precio del producto" data-precio required />
+                        max="9999999" placeholder="Ingrese precio del producto" data-tipo="precio" required />
                     <span class="input-message-error">Este campo no es valido</span>
                 </div>
                 <div class="input-container">
                     <label class="input-label" for="descr">Descripcion</label>
-                    <textarea name="descr" id="descr" class="textarea-form" type="text"
-                        placeholder="Ingrese una descripcion" data-descr></textarea>
+                    <textarea name="descr" id="descr" class="textarea-form" type="text" required
+                        placeholder="Ingrese una descripcion" data-tipo="descripcion"></textarea>
                     <span class="input-message-error">Este campo no es valido</span>
                 </div>
                 <button type="submit" class="button submit-button">Guardar</button>
@@ -90,7 +90,7 @@
                     <form class="form-contacto">
                         <h2 class="contacto-titulo">Hable con nosotros</h2>
                         <input class="input-form" type="text" placeholder="Nombre">
-                        <textarea class="textarea-form" placeholder="Escriba un mensaje"></textarea>
+                        <textarea class="textarea-form" required placeholder="Escriba un mensaje"></textarea>
                         <div>
                             <button type="submit" class="button submit-button">Enviar mensaje</button>
                         </div>
@@ -108,5 +108,5 @@
     integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="module" src="controllers/producto_registrar-controller.js"></script>
-
+<script type="module" src="js/app.js"></script>
 </html>

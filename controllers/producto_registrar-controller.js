@@ -24,7 +24,7 @@ const crearSelect = async () => {
     const optionsHtml = categorias.map(categoria => `
     <option value="${categoria.id}" data-categoria>${categoria.nombre}</option>`).join('');
     select.innerHTML = `
-    <option value="-1">[Seleccione]</option>
+    <option value="-1" disabled selected>[Seleccione]</option>
     ${optionsHtml}`; 
     return select;
 }
@@ -36,10 +36,10 @@ const insertarSelect = async () => {
 insertarSelect();
 const obtenerInfo = async () => {
     if (obtenerId() != null) {
-        const urlI = document.querySelector('[data-url]');
-        const nom = document.querySelector('[data-producto]');
-        const precio = document.querySelector('[data-precio]');
-        const descr = document.querySelector('[data-descr]');
+        const urlI = document.querySelector('[data-tipo="url"]');
+        const nom = document.querySelector('[data-tipo="producto"]');
+        const precio = document.querySelector('[data-tipo="precio"]');
+        const descr = document.querySelector('[data-tipo="descripcion"]');
         try {
             const producto = await productosServices.detalleProducto(obtenerId());
             if (producto != null) {
@@ -66,12 +66,12 @@ obtenerInfo();
 
 formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
-    const urlI = document.querySelector('[data-url]').value;
+    const urlI = document.querySelector('[data-tipo="url"]').value;
     const select = document.querySelector('[data-select]');
     const cate = select.selectedOptions[0].value;
-    const nom = document.querySelector('[data-producto]').value;
-    const precio = document.querySelector('[data-precio]').value;
-    const descr = document.querySelector('[data-descr]').value;
+    const nom = document.querySelector('[data-tipo="producto"]').value;
+    const precio = document.querySelector('[data-tipo="precio"]').value;
+    const descr = document.querySelector('[data-tipo="descripcion"]').value;
     if(cate == -1){
         alert('seleccione una categoria!')
     }else{

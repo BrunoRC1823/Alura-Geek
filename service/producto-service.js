@@ -43,13 +43,13 @@ const actualizarProducto = async (nombre,url,categoria_id, precio,descripcion, i
 const detalleProducto = (id) => {
     return fetch(`http://localhost:3000/producto/${id}`).then((response) => response.json());
 };
-const crearProducto= (nombre,url,categoria, precio,descripcion) => {
+const crearProducto= (nombre,url,categoria_id, precio,descripcion) => {
     return fetch("http://localhost:3000/producto", {
         method: "POST",
         headers: {
             "content-type": "application/json"
         },
-        body: JSON.stringify({ nombre,url,categoria, precio,descripcion, id: uuid.v4() }),
+        body: JSON.stringify({ nombre,url,categoria_id, precio,descripcion, id: uuid.v4() }),
     });
 }
 export const productosServices = {

@@ -1,33 +1,42 @@
 @import url(variables.css);
 @import url(reset.css);
+
 body {
     background-color: var(--body-color);
     font-family: var(--font-family);
     width: 100%;
 }
-button{
+
+button {
     cursor: pointer;
 }
+
 .container {
     display: flex;
 }
-.column{
+
+.column {
     flex-direction: column;
 }
+
 input:focus {
     outline: none;
 }
-.center{
+
+.center {
     align-items: center;
 }
-.flex{
+
+.flex {
     display: flex;
 }
-.input-label{
+
+.input-label {
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
 }
-.input-form{
+
+.input-form {
     width: 100%;
     height: 3rem;
     font-size: 0.9rem;
@@ -36,6 +45,31 @@ input:focus {
     box-sizing: border-box;
     border: none;
 }
+
+.input-container--invalid {
+    margin-bottom: 0.5rem;
+}
+
+.input-container--invalid .input-form {
+    border: 1px solid var(--warning-color);
+    border-radius: 7px;
+}
+
+.input-container--invalid .input-label {
+    color: var(--warning-color);
+}
+
+.input-message-error {
+    display: none;
+}
+
+.input-container--invalid .input-message-error {
+    color: var(--warning-color);
+    display: block;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
 select {
     outline: none;
 }
@@ -49,7 +83,6 @@ select {
     min-height: 5rem;
     max-height: 7rem;
     height: auto;
-    margin-bottom: 1rem;
     font-size: 0.9rem;
     box-sizing: border-box;
     overflow: auto;
@@ -58,31 +91,39 @@ select {
     resize: none;
     box-shadow: 2px 1px 3px var(--shadows-color);
 }
-.input-container{
+.input-container--invalid .textarea-form {
+    border: 1px solid var(--warning-color);
+    border-radius: 7px;
+}
+.input-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
     width: 35%;
 }
-.input-message-error{
+
+.input-message-error {
     display: none;
 }
-.azul{
+
+.azul {
     color: var(--primary-color);
 }
+
 @media screen and (max-width: 768px) {
     .input-form {
         margin-bottom: 0;
         font-size: 0.86rem;
     }
-    
+
     .textarea-form {
         margin-bottom: 0;
         font-size: 0.86rem;
     }
 }
+
 @media screen and (max-width: 360px) {
-    .input-container{
+    .input-container {
         width: 90%;
     }
 }

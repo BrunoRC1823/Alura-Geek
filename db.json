@@ -138,9 +138,9 @@
     },
     {
       "nombre": "Producto XYZ",
+      "precio": "60.00",
       "url": "https://http2.mlstatic.com/D_NQ_NP_682754-MPE53279158597_012023-O.webp",
       "categoria_id": "3",
-      "precio": "60.00",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam",
       "id": 111118
     },
@@ -167,6 +167,14 @@
       "precio": "60.00",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam",
       "id": 111121
+    },
+    {
+      "nombre": "Taza Star Wars",
+      "url": "https://i.linio.com/p/0e862cb7cf030a4b6d7cd56061b4b680-product.webp",
+      "categoria_id": "2",
+      "precio": "22.32",
+      "descripcion": "Gaaaaaaaaaaaa",
+      "id": "e16e0e66-8864-4b53-90b6-b77531349287"
     }
   ],
   "categoria": [
