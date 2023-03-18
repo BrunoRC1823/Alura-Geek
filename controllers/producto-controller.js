@@ -1,18 +1,20 @@
 import { productosServices } from '../service/producto-service.js';
 import { categoriasServices } from '../service/categoria-service.js';
 
-const obtenerId = () => {
+const obtenerIdCate = () => {
     const url = new URL(window.location);
     const id = url.searchParams.get('categoria_id');
     return id;
 }
+const idCate = obtenerIdCate();
+const modal = document.querySelector("[data-modal]");
 const crearTitulo = (categoria) => {
     const tituloContainer = document.querySelector('[data-productos-titulo-container]');
-    if(categoria != null){
+    if (categoria != null) {
         const titulo = `<h1 class="titulo_productos">Todos los<a class="azul"> productos</a> de <a class="azul">${categoria}</a></h1>
         <a href="agregarProducto.html" class="button submit-button">Agregar producto</a>`
         tituloContainer.innerHTML = titulo;
-    }else{
+    } else {
         const titulo = `<h1 class="titulo_productos">Todos los<a class="azul"> productos</a></a></h1>
         <a href="agregarProducto.html" class="button submit-button">Agregar producto</a>`
         tituloContainer.innerHTML = titulo;
@@ -21,12 +23,12 @@ const crearTitulo = (categoria) => {
 };
 
 const CrearNuevoFila = (nombre, precio, url, id) => {
-    const idReduce = id.toString().substring(0, 8)
+    const idReduce = id.toString().substring(0, 8);
     const fila = document.createElement('div');
     const contenido = `
         <div class="img_producto">
             <div class="mantenimiento_container">
-                <i class="fa-solid fa-trash delete-icon" id=${id} data-trashIcon></i>
+                <i class="fa-solid fa-trash delete-icon" data-trashIcon></i>
                 <a href='agregarProducto.html?id=${id}'><i class="fa-solid fa-pen edit-icon"></i></a>
             </div>
         </div>
@@ -39,32 +41,73 @@ const CrearNuevoFila = (nombre, precio, url, id) => {
     fila.innerHTML = contenido;
     const imgProducto = fila.querySelector('.img_producto');
     imgProducto.style.background = `url(${url}) no-repeat center/cover`;
-    const trash = fila.querySelector('[data-trashIcon]');
-    trash.addEventListener('click', () => {
-        const id = trash.id;
-        productosServices.eliminarProducto(id).then(() => {
-        }).catch((e) => console.log(e));
+    const deleteIcon = fila.querySelector('[data-trashIcon]');
+    deleteIcon.addEventListener('click', () => {
+        crearContenidoModal(nombre, id);
     });
     return fila;
 }
-const cards = document.querySelector('[data-cards]');
+const limpiarModal = () => {
+    const modalData = document.querySelector('[data-modal-data-container]');
+    const buttonContainer = document.querySelector('[data-modal-button-container]');
+    modalData.innerHTML = '';
+    buttonContainer.innerHTML = '';
+}
+const crearContenidoModal = (producto, id) => {
+    limpiarModal();
+    const idReduce = id.toString().substring(0, 8)
+    const modalData = document.querySelector('[data-modal-data-container]');
+    const dataContainer = `<h2 class="modal__title">Eliminar</h2>
+    <button class="modal__close" data-close><i class="fa-sharp fa-solid fa-xmark"></i></button>
+    <p class="modal__text">¿Seguro que quiere <b class="negrita">eliminar</b> el producto?</p>
+    <p class="modal__text-content">Nombre:${producto}</p>
+    <p class="modal__text-content">ID: #${idReduce}</p>`
+    modalData.innerHTML = dataContainer;
+    const dataButtonContainer = `
+    <button class="modal__button button submit-button modal__button--confirm" id=${id} data-delete>
+    Si, estoy seguro</button>
+    <button class="modal__button button" data-close>No, cancelar</button>`;
+    const buttonContainer = document.querySelector('[data-modal-button-container]');
+    buttonContainer.innerHTML = dataButtonContainer;
+    eliminarProducto(buttonContainer);
+    const close = [];
+    const mdc= modalData.querySelectorAll("[data-close]");
+    const mbc= buttonContainer.querySelectorAll("[data-close]");
+    close.push(mdc,mbc); 
+    close.forEach((nodo) => {
+        nodo.forEach((cerrar) => {
+            cerrar.addEventListener("click", () => {
+                modal.style.display = "none";
+            });
+        });
+    });
+};
 
-if (obtenerId() == null) {
-    productosServices.listaProductos().then((data) => {
+const CrearListas = async () => {
+    const cards = document.querySelector('[data-cards]');
+    if (idCate == null) {
+        const data = await productosServices.listaProductos();
         crearTitulo(null);
         data.forEach(({ nombre, precio, url, id }) => {
             const nuevaFila = CrearNuevoFila(nombre, precio, url, id);
             cards.appendChild(nuevaFila);
         });
-    });
-} else {
-    categoriasServices.detalleCategoria(obtenerId()).then((data) => {
-        crearTitulo(data.nombre);
-    });
-    productosServices.listaProductosCate(obtenerId()).then((data) => {
-        data.forEach(({ nombre, precio, url, id }) => {
-            const nuevaFila = CrearNuevoFila(nombre, precio, url, id);
-            cards.appendChild(nuevaFila);
-        });
-    });
+    } else {
+        const dataCate = await categoriasServices.detalleCategoria(idCate);
+            crearTitulo(dataCate.nombre);
+        const dataProd = await productosServices.listaProductosCate(idCate);
+            dataProd.forEach(({ nombre, precio, url, id }) => {
+                const nuevaFila = CrearNuevoFila(nombre, precio, url, id);
+                cards.appendChild(nuevaFila);
+            });
+    };
 };
+CrearListas();
+const eliminarProducto = (fila) => {
+    const trash = fila.querySelector('[data-delete]');
+    trash.addEventListener('click', () => {
+        const id = trash.id;
+        productosServices.eliminarProducto(id).then(() => {
+        }).catch((e) => console.log(e));
+    });
+}

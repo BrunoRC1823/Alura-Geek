@@ -19,7 +19,7 @@ const mensajeError = {
     },
     producto: {
         valueMissing: "Este campo no puede estar vacío",
-        patternMismatch: "El nombre del producto debe contener desde 4 a 15 caracteres!"
+        patternMismatch: "El nombre del producto debe contener desde 4 a 25 caracteres!"
     },
     precio: {
         valueMissing: "Este campo no puede estar vacío",

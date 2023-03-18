@@ -1,12 +1,15 @@
 import { productosServices } from "../service/producto-service.js";
 import { categoriasServices } from "../service/categoria-service.js";
+
 const formulario = document.querySelector('[data-form]');
 
-const obtenerId = () => {
+const obtenerId  = async () => {
     const url = new URL(window.location);
     const id = url.searchParams.get('id');
     return id;
 }
+const idP = await obtenerId();
+console.log(idP);
 const obtenerCategorias = async () => {
     try {
         const data = await categoriasServices.listaCategorias();
@@ -28,20 +31,23 @@ const crearSelect = async () => {
     ${optionsHtml}`; 
     return select;
 }
-const containerSelect = document.querySelector('[data-select-categoria-container]')
+
 const insertarSelect = async () => {
+    const containerSelect = document.querySelector('[data-select-categoria-container]');
     const nuevoSelect = await crearSelect();
-    containerSelect.insertBefore(nuevoSelect, containerSelect.childNodes[2]);
+    containerSelect.insertAdjacentElement('beforeend', nuevoSelect);
 };
+
 insertarSelect();
+
 const obtenerInfo = async () => {
-    if (obtenerId() != null) {
+    if (idP != null) {
         const urlI = document.querySelector('[data-tipo="url"]');
         const nom = document.querySelector('[data-tipo="producto"]');
         const precio = document.querySelector('[data-tipo="precio"]');
         const descr = document.querySelector('[data-tipo="descripcion"]');
         try {
-            const producto = await productosServices.detalleProducto(obtenerId());
+            const producto = await productosServices.detalleProducto(idP);
             if (producto != null) {
                 urlI.value = producto.url;
                 nom.value = producto.nombre;
@@ -64,7 +70,7 @@ const obtenerInfo = async () => {
 
 obtenerInfo();
 
-formulario.addEventListener('submit', (evento) => {
+formulario.addEventListener('submit',  (evento) => {
     evento.preventDefault();
     const urlI = document.querySelector('[data-tipo="url"]').value;
     const select = document.querySelector('[data-select]');
@@ -75,12 +81,12 @@ formulario.addEventListener('submit', (evento) => {
     if(cate == -1){
         alert('seleccione una categoria!')
     }else{
-        if (obtenerId() == null) {
+        if (idP == null) {
             productosServices.crearProducto(nom, urlI, cate, precio, descr).then(() => {
                 alert('Exito!');
             }).catch(() => alert('Error!'));
         } else {
-            productosServices.actualizarProducto(nom, urlI, cate, precio, descr, obtenerId()).then(() => {
+            productosServices.actualizarProducto(nom, urlI, cate, precio, descr, idP).then(() => {
                 alert('Exito!');
             }).catch(() => alert('Error!'));
         }

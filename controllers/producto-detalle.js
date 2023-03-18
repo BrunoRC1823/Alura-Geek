@@ -5,7 +5,7 @@ const obtenerId = () => {
     const id = url.searchParams.get('id');
     return id;
 }
-
+const idP = obtenerId();
 const crearNuevaSeccion = (nombre, precio, url, descripcion) => {
     const seccion = document.createElement('section');
     const contenido = `
@@ -71,4 +71,4 @@ const obtenerInfo = (id) => {
     }
 };
 
-obtenerInfo(obtenerId());
+obtenerInfo(idP);

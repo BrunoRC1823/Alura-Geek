@@ -22,7 +22,7 @@
     padding: 0.5rem 0.6rem;
 }
 .delete-icon{
-    color: var(--body-color);
+    color: var(--secondary-color);
     cursor: pointer;
 }
 .delete-icon:hover{
@@ -32,7 +32,7 @@
     text-shadow: 0px 0px 15px red;
 }
 .edit-icon{
-    color: var(--body-color);
+    color: var(--secondary-color);
     cursor: pointer;
 }
 .edit-icon:hover{

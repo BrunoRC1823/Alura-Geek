@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/producto.css">
     <link rel="stylesheet" href="assets/css/components/card.css">
     <link rel="stylesheet" href="assets/css/productos-total.css">
+    <link rel="stylesheet" href="assets/css/components/modal.css">
     <link rel="stylesheet" href="assets/css/quiene-somos.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
@@ -37,13 +38,21 @@
     <main class="container column">
         <section class="productos_section">
             <div class="productos_titulo-container container" data-productos-titulo-container>
-                
-                
+
+
             </div>
             <div class="cards" data-cards>
-                
+
             </div>
         </section>
+        <div class="modal-container" data-modal>
+            <article class="modal">
+                <div data-modal-data-container>
+                </div>
+                <div class="modal__button-container" data-modal-button-container>
+                </div>
+            </article>
+        </div>
         <section class="quienes-somos_section">
             <div class="quienes-somos_container container">
                 <div class="logo_quienes-somos_container">
@@ -66,6 +75,7 @@
                             <button type="submit" class="button submit-button">Enviar mensaje</button>
                         </div>
                     </form>
+
                 </div>
             </div>
         </section>
@@ -76,4 +86,6 @@
 </body>
 <script src="https://kit.fontawesome.com/8e9f63a036.js" crossorigin="anonymous"></script>
 <script type="module" src="controllers/producto-controller.js"></script>
+<script type="module" src="js/app.js"></script>
+
 </html>
