@@ -60,20 +60,19 @@ const crearContenidoModal = (producto, id) => {
     const dataContainer = `<h2 class="modal__title">Eliminar</h2>
     <button class="modal__close" data-close><i class="fa-sharp fa-solid fa-xmark"></i></button>
     <p class="modal__text">¿Seguro que quiere <b class="negrita">eliminar</b> el producto?</p>
-    <p class="modal__text-content">Nombre:${producto}</p>
+    <p class="modal__text-content" data-delete-nombre>Nombre:${producto}</p>
     <p class="modal__text-content">ID: #${idReduce}</p>`
     modalData.innerHTML = dataContainer;
     const dataButtonContainer = `
-    <button class="modal__button button submit-button modal__button--confirm" id=${id} data-delete>
+    <button class="modal__button button submit-button modal__button--confirm" type="submit" id=${id} data-delete>
     Si, estoy seguro</button>
     <button class="modal__button button" data-close>No, cancelar</button>`;
     const buttonContainer = document.querySelector('[data-modal-button-container]');
     buttonContainer.innerHTML = dataButtonContainer;
-    eliminarProducto(buttonContainer);
     const close = [];
-    const mdc= modalData.querySelectorAll("[data-close]");
-    const mbc= buttonContainer.querySelectorAll("[data-close]");
-    close.push(mdc,mbc); 
+    const mdc = modalData.querySelectorAll("[data-close]");
+    const mbc = buttonContainer.querySelectorAll("[data-close]");
+    close.push(mdc, mbc);
     close.forEach((nodo) => {
         nodo.forEach((cerrar) => {
             cerrar.addEventListener("click", () => {
@@ -81,6 +80,7 @@ const crearContenidoModal = (producto, id) => {
             });
         });
     });
+    eliminarProducto(buttonContainer);
 };
 
 const CrearListas = async () => {
@@ -94,20 +94,23 @@ const CrearListas = async () => {
         });
     } else {
         const dataCate = await categoriasServices.detalleCategoria(idCate);
-            crearTitulo(dataCate.nombre);
+        crearTitulo(dataCate.nombre);
         const dataProd = await productosServices.listaProductosCate(idCate);
-            dataProd.forEach(({ nombre, precio, url, id }) => {
-                const nuevaFila = CrearNuevoFila(nombre, precio, url, id);
-                cards.appendChild(nuevaFila);
-            });
+        dataProd.forEach(({ nombre, precio, url, id }) => {
+            const nuevaFila = CrearNuevoFila(nombre, precio, url, id);
+            cards.appendChild(nuevaFila);
+        });
     };
 };
 CrearListas();
+
 const eliminarProducto = (fila) => {
     const trash = fila.querySelector('[data-delete]');
-    trash.addEventListener('click', () => {
+    trash.addEventListener('click', (event) => {
+        event.preventDefault();
         const id = trash.id;
         productosServices.eliminarProducto(id).then(() => {
+            location.reload();
         }).catch((e) => console.log(e));
     });
 }

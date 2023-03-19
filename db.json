@@ -50,14 +50,6 @@
     },
     {
       "nombre": "Producto XYZ",
-      "url": "https://http2.mlstatic.com/D_NQ_NP_663535-MPE50022111122_052022-O.webp",
-      "categoria_id": "1",
-      "precio": "60.00",
-      "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam",
-      "id": 11117
-    },
-    {
-      "nombre": "Producto XYZ",
       "precio": "60.00",
       "url": "assets/img/mandoxbox.jpg",
       "categoria_id": "2",
@@ -167,6 +159,22 @@
       "precio": "60.00",
       "descripcion": "Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam",
       "id": 111121
+    },
+    {
+      "nombre": "Producto XYZZZZZZ",
+      "url": "https://i.linio.com/p/0e862cb7cf030a4b6d7cd56061b4b680-product.webp",
+      "categoria_id": "1",
+      "precio": "22.3",
+      "descripcion": "gaaaaaaaa",
+      "id": "2846e669-1f6a-4b12-a0c0-e5a56bacaae7"
+    },
+    {
+      "nombre": "Taza Star Wars",
+      "url": "https://i.linio.com/p/0e862cb7cf030a4b6d7cd56061b4b680-product.webp",
+      "categoria_id": "1",
+      "precio": "22.3",
+      "descripcion": "fgdg",
+      "id": "6e5f6960-2844-4d83-bb96-3ad18b4f9e41"
     }
   ],
   "categoria": [
